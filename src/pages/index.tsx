@@ -16,14 +16,19 @@ export default function Home() {
   }
   
   const download = () => {
+    setEditMode(false)
     const coupon = document.getElementById('coupon_container')
     if(!coupon) {
       alert('No coupon found')
     } else {
-      html2canvas(coupon, {scale:1}).then((canvas) => {
+      html2canvas(coupon, {
+        scale:2,
+        windowWidth: 1920,
+        windowHeight: 929
+      }).then((canvas) => {
         const link = document.createElement('a')
         link.download = 'coupon.jpg'
-        link.href = canvas.toDataURL('image/jpg')
+        link.href = canvas.toDataURL('image/jpg', 1.0)
         link.click()
       })
     }
