@@ -2,9 +2,11 @@ lockfileVersion: 5.4
 
 specifiers:
   '@next/font': 13.1.6
+  '@types/dom-to-image': ^2.6.4
   '@types/node': 18.11.18
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
+  dom-to-image: ^2.6.0
   eslint: 8.33.0
   eslint-config-next: 13.1.6
   html2canvas: ^1.4.1
@@ -15,9 +17,11 @@ specifiers:
 
 dependencies:
   '@next/font': 13.1.6
+  '@types/dom-to-image': 2.6.4
   '@types/node': 18.11.18
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
+  dom-to-image: 2.6.0
   eslint: 8.33.0
   eslint-config-next: 13.1.6_4vsywjlpuriuw3tl5oq6zy5a64
   html2canvas: 1.4.1
@@ -244,6 +248,10 @@ packages:
     resolution: {integrity: sha512-4C7nX/dvpzB7za4Ql9K81xK3HPxCpHMgwTZVyf+9JQ6VUbn9jjZVN7/Nkdz/Ugzs2CSjqnL/UPXroiVBVHUWUw==}
     dependencies:
       tslib: 2.5.0
+    dev: false
+
+  /@types/dom-to-image/2.6.4:
+    resolution: {integrity: sha512-UddUdGF1qulrSDulkz3K2Ypq527MR6ixlgAzqLbxSiQ0icx0XDlIV+h4+edmjq/1dqn0KgN0xGSe1kI9t+vGuw==}
     dev: false
 
   /@types/json5/0.0.29:
@@ -619,6 +627,10 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       esutils: 2.0.3
+    dev: false
+
+  /dom-to-image/2.6.0:
+    resolution: {integrity: sha512-Dt0QdaHmLpjURjU7Tnu3AgYSF2LuOmksSGsUcE6ItvJoCWTBEmiMXcqBdNSAm9+QbbwD7JMoVsuuKX6ZVQv1qA==}
     dev: false
 
   /emoji-regex/9.2.2:

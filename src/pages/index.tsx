@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { useState } from 'react'
-import html2canvas from 'html2canvas'
+import domtoimage from 'dom-to-image'
 //Styles
 import styles from '@/styles/Home.module.css'
 //Components
@@ -21,14 +21,10 @@ export default function Home() {
     if(!coupon) {
       alert('No coupon found')
     } else {
-      html2canvas(coupon, {
-        scale:1,
-        windowWidth: 1920,
-        windowHeight: 929
-      }).then((canvas) => {
+      domtoimage.toJpeg(coupon, {quality: 0.95}).then(dataUrl => {
         const link = document.createElement('a')
         link.download = 'coupon.jpg'
-        link.href = canvas.toDataURL('image/jpg', 1.0)
+        link.href = dataUrl
         link.click()
       })
     }

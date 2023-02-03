@@ -47,7 +47,7 @@ const Coupon = (props: CouponProps) => {
                     <div className={styles.footer_logos}>
                         <h2>Powered by</h2>
                         <div className={styles.logos}>
-                            <Image src="/vercel-logotype-dark.png" alt="Logo" width={100} height={25} className={styles.vercel} />
+                            <Image src="/vercel-logotype-dark.svg" alt="Logo" width={100} height={25} className={styles.vercel} />
                         </div>
                     </div>
                 </div>
