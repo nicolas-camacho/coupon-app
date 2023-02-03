@@ -15,8 +15,8 @@ export default function Home() {
     setEditMode(!editMode)
   }
   
-  const download = () => {
-    setEditMode(false)
+  const download = async () => {
+    await setEditMode(false)
     const coupon = document.getElementById('coupon_container')
     if(!coupon) {
       alert('No coupon found')
