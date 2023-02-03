@@ -42,7 +42,7 @@ const Coupon = (props: CouponProps) => {
                 <div className={styles.coupon_rip}></div>
                 <div className={styles.coupon_footer}>
                     <div>
-                        <Image priority src="/frame.svg" alt="Logo" width={100} height={100} className={styles.qr} />
+                        <Image priority src="/otherqr.svg" alt="Logo" width={100} height={100} className={styles.qr} />
                     </div>
                     <div className={styles.footer_logos}>
                         <h2>Powered by</h2>

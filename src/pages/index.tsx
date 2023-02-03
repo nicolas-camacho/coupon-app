@@ -22,7 +22,7 @@ export default function Home() {
       alert('No coupon found')
     } else {
       html2canvas(coupon, {
-        scale:1,
+        scale:2,
         windowWidth: 1920,
         windowHeight: 929,
         allowTaint: true,
@@ -30,7 +30,7 @@ export default function Home() {
       }).then((canvas) => {
         const link = document.createElement('a')
         link.download = 'coupon.jpg'
-        link.href = canvas.toDataURL('image/jpg', 1.0)
+        link.href = canvas.toDataURL('image/jpg', 0.98)
         link.click()
       })
     }
