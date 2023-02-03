@@ -30,7 +30,7 @@ export default function Home() {
       }).then((canvas) => {
         const link = document.createElement('a')
         link.download = 'coupon.jpg'
-        link.href = canvas.toDataURL('image/jpg', 0.98)
+        link.href = canvas.toDataURL('image/octet-stream', 0.98)
         link.click()
       })
     }
