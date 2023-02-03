@@ -23,6 +23,7 @@
   font-family: var(--font-mono);
   cursor: pointer;
   transition: 0.5s;
+  color: black;
 }
 
 .header button:hover {

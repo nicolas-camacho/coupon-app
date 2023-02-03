@@ -20,7 +20,7 @@ export default function Home() {
     if(!coupon) {
       alert('No coupon found')
     } else {
-      html2canvas(coupon, {scale:2}).then((canvas) => {
+      html2canvas(coupon, {scale:1}).then((canvas) => {
         const link = document.createElement('a')
         link.download = 'coupon.png'
         link.href = canvas.toDataURL('image/png')
