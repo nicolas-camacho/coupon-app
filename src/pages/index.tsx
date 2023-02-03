@@ -34,7 +34,6 @@ export default function Home() {
               let newFile = new File([blob], 'coupon.jpg', {type: 'image/jpeg'})
               navigator.share({
                 files: [newFile],
-                title: 'Coupon',
               })
             }
           })
