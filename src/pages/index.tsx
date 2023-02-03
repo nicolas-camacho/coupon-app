@@ -28,10 +28,27 @@ export default function Home() {
         allowTaint: true,
         useCORS: true,
       }).then((canvas) => {
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+          canvas.toBlob(blob => {
+            if(blob) {
+              navigator.share({
+                files: [new File([blob], 'coupon.jpg', {type: 'image/jpeg'})],
+                title: 'Coupon',
+              })
+            }
+          })
+        } else {
+          const link = document.createElement('a')
+          link.download = 'coupon.jpg'
+          link.href = canvas.toDataURL('image/octet-stream', 0.98)
+          link.click()
+        }
+        /*
         const link = document.createElement('a')
         link.download = 'coupon.jpg'
         link.href = canvas.toDataURL('image/octet-stream', 0.98)
         link.click()
+        */
       })
     }
 
