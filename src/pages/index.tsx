@@ -10,19 +10,25 @@ import Coupon from '@/components/Coupon'
 export default function Home() {
 
   const [editMode, setEditMode] = useState(false);
+
+  const toogleEditMode = () => {
+    setEditMode(!editMode)
+  }
   
   const download = () => {
     const coupon = document.getElementById('coupon_container')
     if(!coupon) {
       alert('No coupon found')
     } else {
-      html2canvas(coupon).then(canvas => {
+      html2canvas(coupon, {scale:2}).then((canvas) => {
         const link = document.createElement('a')
         link.download = 'coupon.png'
         link.href = canvas.toDataURL('image/png')
         link.click()
       })
     }
+
+    return true
   }
 
   return (
@@ -36,9 +42,9 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.header}>
           <button onClick={download}>Download</button>
-          <button>Edit</button>
+          <button onClick={toogleEditMode}>{editMode ? "Save" : "Edit"}</button>
         </div>
-        <Coupon />
+        <Coupon editMode={editMode} />
       </main>
     </>
   )
