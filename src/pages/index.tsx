@@ -43,12 +43,6 @@ export default function Home() {
           link.href = canvas.toDataURL('image/octet-stream', 0.98)
           link.click()
         }
-        /*
-        const link = document.createElement('a')
-        link.download = 'coupon.jpg'
-        link.href = canvas.toDataURL('image/octet-stream', 0.98)
-        link.click()
-        */
       })
     }
 
@@ -65,7 +59,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.header}>
-          <button onClick={download}>Download</button>
+          <button onClick={download}>Share</button>
           <button onClick={toogleEditMode}>{editMode ? "Save" : "Edit"}</button>
         </div>
         <Coupon editMode={editMode} />
