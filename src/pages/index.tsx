@@ -31,8 +31,9 @@ export default function Home() {
         if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
           canvas.toBlob(blob => {
             if(blob) {
+              let newFile = new File([blob], 'coupon.jpg', {type: 'image/jpeg'})
               navigator.share({
-                files: [new File([blob], 'coupon.jpg', {type: 'image/jpeg'})],
+                files: [newFile],
                 title: 'Coupon',
               })
             }
