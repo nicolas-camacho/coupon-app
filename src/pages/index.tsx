@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import { useState } from 'react'
-import domtoimage from 'dom-to-image'
-import { saveAs } from 'file-saver'
+import html2canvas from 'html2canvas'
 //Styles
 import styles from '@/styles/Home.module.css'
 //Components
@@ -22,8 +21,17 @@ export default function Home() {
     if(!coupon) {
       alert('No coupon found')
     } else {
-      domtoimage.toBlob(coupon, {quality: 0.95}).then(blob => {
-        saveAs(blob, "coupon.png")
+      html2canvas(coupon, {
+        scale:1,
+        windowWidth: 1920,
+        windowHeight: 929,
+        allowTaint: true,
+        useCORS: true,
+      }).then((canvas) => {
+        const link = document.createElement('a')
+        link.download = 'coupon.jpg'
+        link.href = canvas.toDataURL('image/jpg', 1.0)
+        link.click()
       })
     }
 
