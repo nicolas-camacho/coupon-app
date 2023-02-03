@@ -22,8 +22,8 @@ export default function Home() {
     } else {
       html2canvas(coupon, {scale:1}).then((canvas) => {
         const link = document.createElement('a')
-        link.download = 'coupon.png'
-        link.href = canvas.toDataURL('image/png')
+        link.download = 'coupon.jpg'
+        link.href = canvas.toDataURL('image/jpg')
         link.click()
       })
     }
