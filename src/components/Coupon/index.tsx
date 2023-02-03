@@ -1,5 +1,7 @@
 import styles from './Coupon.module.css'
 import Image from 'next/image'
+//Components
+import EditableText from '@/components/EditableText'
 
 export interface CouponProps {
     editMode: boolean
@@ -12,30 +14,25 @@ const Coupon = (props: CouponProps) => {
                 <div className={styles.coupon_main}>
                     <div className={styles.main_header}>
                         <h1>Doer</h1>
-                        <input type="text" disabled={!props.editMode} defaultValue="Nicolas Camacho" />
+                        <EditableText defaultValue="Nicolas Camacho" editable={props.editMode} />
                     </div>
                     <div className={styles.main_content}>
                         <h2>Coupon for:</h2>
-                        <input type="text" disabled={!props.editMode} defaultValue="Free Coffee" />
+                        <EditableText defaultValue="Free coffee" editable={props.editMode} />
                     </div>
                     <div className={styles.main_details}>
                         <div className={styles.details_date}> 
                             <h2>Valid until:</h2>
-                            <input type="text" disabled={!props.editMode} defaultValue="31/12/2021" />
+                            <EditableText defaultValue="31/12/2021" editable={props.editMode} />
                         </div>
                         <div className={styles.details_price}>
                             <div>
                                 <h2>Price</h2>
-                                <input type="text" disabled={!props.editMode} defaultValue="$ 0.00" />
+                                <EditableText defaultValue="$ 0.00" editable={props.editMode} />
                             </div>
                         </div>
                         <div className={styles.details_location}>
-                            <div 
-                                contentEditable={props.editMode}
-                                suppressContentEditableWarning={true}
-                                className={`${styles.editable_location} ${props.editMode ? styles.enabled : ''}`}>
-                                Barranquilla - Atlantico / Colombia
-                            </div>
+                            <EditableText defaultValue="Barranquilla - Atlantico / Colombia" editable={props.editMode} />
                         </div>
                     </div>
                 </div>

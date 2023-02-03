@@ -19,14 +19,15 @@
   border: 2px solid var(--color-two);
   font-size: 1rem;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 20px;
   font-family: var(--font-mono);
   cursor: pointer;
   transition: 0.5s;
-  color: black;
+  color: #ffffff;
 }
 
 .header button:hover {
   background-color: var(--color-one);
   border: 2px dashed var(--color-two);
+  color: #ffffff;
 }

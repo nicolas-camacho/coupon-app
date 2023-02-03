@@ -1,0 +1,11 @@
+.editable {
+    margin-top: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+}
+
+.enabled {
+    border: 2px solid var(--color-two);
+}
