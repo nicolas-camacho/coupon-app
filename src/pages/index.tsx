@@ -22,7 +22,7 @@ export default function Home() {
       alert('No coupon found')
     } else {
       html2canvas(coupon, {
-        scale:2,
+        scale:1,
         windowWidth: 1920,
         windowHeight: 929
       }).then((canvas) => {
