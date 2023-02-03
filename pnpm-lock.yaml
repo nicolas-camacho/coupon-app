@@ -3,12 +3,14 @@ lockfileVersion: 5.4
 specifiers:
   '@next/font': 13.1.6
   '@types/dom-to-image': ^2.6.4
+  '@types/file-saver': ^2.0.5
   '@types/node': 18.11.18
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
   dom-to-image: ^2.6.0
   eslint: 8.33.0
   eslint-config-next: 13.1.6
+  file-saver: ^2.0.5
   html2canvas: ^1.4.1
   next: 13.1.6
   react: 18.2.0
@@ -18,12 +20,14 @@ specifiers:
 dependencies:
   '@next/font': 13.1.6
   '@types/dom-to-image': 2.6.4
+  '@types/file-saver': 2.0.5
   '@types/node': 18.11.18
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
   dom-to-image: 2.6.0
   eslint: 8.33.0
   eslint-config-next: 13.1.6_4vsywjlpuriuw3tl5oq6zy5a64
+  file-saver: 2.0.5
   html2canvas: 1.4.1
   next: 13.1.6_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
@@ -252,6 +256,10 @@ packages:
 
   /@types/dom-to-image/2.6.4:
     resolution: {integrity: sha512-UddUdGF1qulrSDulkz3K2Ypq527MR6ixlgAzqLbxSiQ0icx0XDlIV+h4+edmjq/1dqn0KgN0xGSe1kI9t+vGuw==}
+    dev: false
+
+  /@types/file-saver/2.0.5:
+    resolution: {integrity: sha512-zv9kNf3keYegP5oThGLaPk8E081DFDuwfqjtiTzm6PoxChdJ1raSuADf2YGCVIyrSynLrgc8JWv296s7Q7pQSQ==}
     dev: false
 
   /@types/json5/0.0.29:
@@ -1046,6 +1054,10 @@ packages:
     engines: {node: ^10.12.0 || >=12.0.0}
     dependencies:
       flat-cache: 3.0.4
+    dev: false
+
+  /file-saver/2.0.5:
+    resolution: {integrity: sha512-P9bmyZ3h/PRG+Nzga+rbdI4OEpNDzAVyy74uVO9ATgzLK6VtAsYybF/+TOCvrc0MO793d6+42lLyZTw7/ArVzA==}
     dev: false
 
   /fill-range/7.0.1:

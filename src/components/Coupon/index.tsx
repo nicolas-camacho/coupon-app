@@ -16,7 +16,7 @@ const Coupon = (props: CouponProps) => {
                     </div>
                     <div className={styles.main_content}>
                         <h2>Coupon for:</h2>
-                        <input type="text" disabled={!props.editMode} defaultValue="Free Cofee" />
+                        <input type="text" disabled={!props.editMode} defaultValue="Free Coffee" />
                     </div>
                     <div className={styles.main_details}>
                         <div className={styles.details_date}> 

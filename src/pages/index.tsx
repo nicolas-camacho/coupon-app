@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { useState } from 'react'
 import domtoimage from 'dom-to-image'
+import { saveAs } from 'file-saver'
 //Styles
 import styles from '@/styles/Home.module.css'
 //Components
@@ -21,11 +22,8 @@ export default function Home() {
     if(!coupon) {
       alert('No coupon found')
     } else {
-      domtoimage.toJpeg(coupon, {quality: 0.95}).then(dataUrl => {
-        const link = document.createElement('a')
-        link.download = 'coupon.jpg'
-        link.href = dataUrl
-        link.click()
+      domtoimage.toBlob(coupon, {quality: 0.95}).then(blob => {
+        saveAs(blob, "coupon.png")
       })
     }
 
