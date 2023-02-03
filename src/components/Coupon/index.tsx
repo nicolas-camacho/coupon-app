@@ -42,12 +42,12 @@ const Coupon = (props: CouponProps) => {
                 <div className={styles.coupon_rip}></div>
                 <div className={styles.coupon_footer}>
                     <div>
-                        <Image priority src="/qr-coupon-generator.svg" alt="Logo" width={100} height={100} />
+                        <Image priority src="/qr-coupon-generator.svg" alt="Logo" width={100} height={100} className={styles.qr} />
                     </div>
                     <div className={styles.footer_logos}>
                         <h2>Powered by</h2>
                         <div className={styles.logos}>
-                            <Image src="/vercel-logotype-dark.png" alt="Logo" width={100} height={25} />
+                            <Image src="/vercel-logotype-dark.png" alt="Logo" width={100} height={25} className={styles.vercel} />
                         </div>
                     </div>
                 </div>

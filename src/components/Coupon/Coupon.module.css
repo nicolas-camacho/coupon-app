@@ -134,3 +134,13 @@
     align-items: center;
     color: var(--color-two);
 }
+
+.qr {
+    width: 100px;
+    height: 100px;
+}
+
+.vercel {
+    width: 100px;
+    height: 25px;
+}
