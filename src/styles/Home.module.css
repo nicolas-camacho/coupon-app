@@ -26,8 +26,16 @@
   color: #ffffff;
 }
 
-.header button:hover {
+.header button:active {
   background-color: var(--color-one);
   border: 2px dashed var(--color-two);
   color: #ffffff;
+}
+
+@media (hover: hover) {
+  .header button:hover {
+    background-color: var(--color-one);
+    border: 2px dashed var(--color-two);
+    color: #ffffff;
+  }
 }
